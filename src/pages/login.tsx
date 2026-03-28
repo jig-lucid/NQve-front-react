@@ -1,6 +1,6 @@
 // src/pages/LoginPage.tsx
-import React from 'react';
 import '../styles/LoginPage.css';
+import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
     const handleGoogleLogin = () => {
@@ -23,6 +23,10 @@ export default function LoginPage() {
 
         <div className="forgot-password">
           <a href="#">비밀번호를 잊으셨나요?</a>
+        </div>
+        <div className="signup-link">
+                  <span>계정이 없으신가요? </span>
+                  <Link to="/signup">회원가입</Link>
         </div>
       </div>
     </div>

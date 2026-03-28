@@ -99,3 +99,15 @@
 .forgot-password a:hover {
   text-decoration: underline;
 }
+
+.signup-link {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #3897f0;
+  font-weight: bold;
+  text-decoration: none;
+}
