@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
     const handleGoogleLogin = () => {
-        window.location.href = `${import.meta.env.VITE_BACKEND_URL}/oauth2/authorization/google`;
+        /*window.location.href = `${import.meta.env.VITE_BACKEND_URL}/oauth2/authorization/google`;*/
+        alert('백엔드 연결 전');
       };
 
   return (
