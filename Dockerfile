@@ -1,6 +1,6 @@
 FROM node:18 AS build
 WORKDIR /app
-ARG VITE_BACKEND_URL=http://localhost:8080
+ARG VITE_BACKEND_URL=/api
 ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
 COPY package*.json ./
 RUN npm install
