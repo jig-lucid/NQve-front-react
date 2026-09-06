@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
+import { getCsrfHeaders } from '../api/csrf';
 
 export default function SignupPage() {
   const navigate = useNavigate();
@@ -77,11 +78,13 @@ export default function SignupPage() {
 
     try {
       setIsSubmitting(true);
+      const csrfHeaders = await getCsrfHeaders();
 
       const response = await fetch('/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          ...csrfHeaders,
         },
         body: JSON.stringify({
           email: email.trim(),

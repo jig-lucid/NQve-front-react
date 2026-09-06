@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate} from "react-router";
 import {authRoutes} from "./authRoutes";
+import FeedPage from "../pages/feed";
 
 export const router = createBrowserRouter([
     {
@@ -8,4 +9,8 @@ export const router = createBrowserRouter([
     },
 
     ...authRoutes,
+    {
+        path: '/main',
+        element: <FeedPage />,
+    },
 ]);
